@@ -16,7 +16,9 @@ The code is here: [https://github.com/bigcrimping/lightning_popper/tree/main/lig
 I have added in libraries from the following:
 
 https://github.com/endail/hx711-pico-c <-- scales interface
+
 https://github.com/miketeachman/micropython-rotary/tree/master <-- rotary controller
+
 https://github.com/stlehmann/micropython-ssd1306/tree/master <-- for the display
 
 ## Wiring
