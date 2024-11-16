@@ -36,6 +36,8 @@ Wiring is as below:
 
 ![Wiring](https://github.com/user-attachments/assets/6ebd9db8-6699-4514-912d-9047a004d1da)
 
+![image](https://github.com/user-attachments/assets/00cb2592-b35a-4b3e-8a65-4214e0ec6f15)
+
 
 ## Mechanical Files
 
