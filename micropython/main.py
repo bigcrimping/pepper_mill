@@ -12,9 +12,9 @@ hx = hx711(Pin(12), Pin(13))
 i2c=I2C(1,sda=Pin(2), scl=Pin(3), freq=400000)
 button = Pin(6, Pin.IN, Pin.PULL_UP)
 count2mg = 18
-little_val = 20000
-lots_val = 40000
-all_val = 120000
+little_val = 40000
+lots_val = 80000
+all_val = 240000
 
 
 r = RotaryIRQ(pin_num_clk=4, 
