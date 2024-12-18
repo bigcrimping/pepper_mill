@@ -12,6 +12,9 @@ hx = hx711(Pin(12), Pin(13))
 i2c=I2C(1,sda=Pin(2), scl=Pin(3), freq=400000)
 button = Pin(6, Pin.IN, Pin.PULL_UP)
 count2mg = 18
+little_val = 20000
+lots_val = 40000
+all_val = 120000
 
 
 r = RotaryIRQ(pin_num_clk=4, 
@@ -45,6 +48,7 @@ def rotate(steps):
 
 def display_mg(mg):
     
+    mg = str(mg)
     display.fill(0)
     display.text("",0,0)
     display.text("",0,17)
@@ -106,13 +110,13 @@ def pepper_dispense(val_new):
     update_display(3)
     before = read_weight(10)
     if (val_new == 0):
-        rotate(10000)
+        rotate(little_val)
     elif (val_new == 1):
-        rotate(20000)
+        rotate(lots_val)
     elif (val_new == 2):
-        rotate(60000)
+        rotate(all_val)
     after = read_weight(10)
-    measure = "{:.2f}".format((after-before)/count2mg)
+    measure = round((after - before) / count2mg)
     print(measure)
     display_mg(measure)
     update_display(val_new)
